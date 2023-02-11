@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #f{
+            border:none;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+        #t{
+            border:none;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>SWAP TWO CITIES</h1>
+    <label>FROM:</label>
+    <input type="text" id="f"><br>
+    <br><br>
+    <label>TO:</label>
+    <input type="text" id="t"><br>
+    <br>
+    <label>FROM:</label>
+    <label id="res"></label>
+    <br><br>
+    <label>TO:</label>
+    <label id="fin"></label>
+    <br><br>
+    <button onclick="swap()">swap</button>
+    
+    
+    </div>
+    <script>
+        function swap(){
+            var f=document.getElementById("f").value;
+            var t=document.getElementById("t").value;
+            var temp=f;
+            var f=t;
+            var t=temp;
+            document.getElementById("res").innerHTML+=f;
+            document.getElementById("fin").innerHTML+=t;
+            
+            
+
+            
+          
+
+        }
+    </script>
+</body>
+</html>
