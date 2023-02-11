@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid black;
+            width: 300px;
+            height: 250px;
+            margin-left: 600px;
+            margin-top: 200px;
+        }
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div align="center">
+        <h1>LOGIN TO DRF</h1>
+        <label>USERNAME*</label>
+        <br>
+        <input type="text" pattern="[a-zA-Z0-9]{5}" title="pls enter 5 alphabtes" required>
+        <br>
+        <label>PASSWORD*</label><br>
+        <input type="password"id="pwd" pattern=".{7}" title="pls enter 7 alphabtes" required>
+        <button onclick="showpwd()"><i class="fa fa-eye" aria-hidden="true"></i></button><br><br>
+        <input type="button" value="LOGIN" onclick="show()">
+        <input type="button" value="cancel">
+        <label id="res"></label>
+    </div>
+    <script>
+        function showpwd(){
+        var pwd=document.getElementById("pwd");
+        if(pwd.type=="password"){
+            pwd.type="text"
+
+        }
+        else{
+            pwd.type="password"
+        }
+    }
+        function show(){
+            var pw=document.getElementById("pwd").value;
+            var pd=pw.slice(0,3);
+            var tpd=pd+"1234";
+
+        if(tpd==pw){
+          document.getElementById("res").innerHTML+="<br>login successfully";
+
+        }
+        else{
+            alert("login unsuccesfully");
+        }
+        }
+    
+    </script>
+</body>
+</html>
