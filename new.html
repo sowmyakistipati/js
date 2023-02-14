@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1 id="fun1"></h1>
+    <h1 id="fun2"></h1>
+    <h1 id="fun3"></h1>
+</head>
+<body>
+    <script>
+        
+        var myfun1=()=>{
+            return new Promise((res,rej)=>{
+            setTimeout(()=>{res("hello i am fun1")},3000)
+        });
+        }
+        var myfun2=()=>{
+            return "hello i am fun2";
+        }
+        var myfun3=()=>{
+            return "hello i am fun3";
+        }
+         async function res(){
+            var res1= await myfun1();
+            document.getElementById("fun1").innerHTML=res1;
+       
+            var res2=myfun2();
+            document.getElementById("fun2").innerHTML=res2;
+            var res3=myfun3();
+            document.getElementById("fun3").innerHTML=res3;
+        }
+        res();
+    </script>
+</body>
+</html>

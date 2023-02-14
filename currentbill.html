@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid black;
+            width:320px;
+            height:320px;
+            box-shadow: 3px 3px 3px 3px lightgrey;
+            padding:50px;
+            margin-left: 450px;
+            margin-top: 120px;
+        }
+        #mn{
+          border: none;
+          border-bottom:1px solid grey ;
+        }
+        #nu{
+          border: none;
+          border-bottom:1px solid grey ;
+        }
+        #city{
+          border: none;
+          border-bottom:1px solid grey ;
+        }
+        #btype{
+          border: none;
+          border-bottom:1px solid grey ;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <div>
+        <h1  align="center">APSPDCL</h1>
+        <label>METER NUMBER:</label>
+        <input type="number" id="mn"><br><br>
+         <label>NO OF UNITS:</label>
+         <input type="number" id="nu"><br><br>
+         <label>CITY:</label>
+         <select id="city">
+            <option>hyd</option>
+            <option>bangloure</option>
+         </select><br><br>
+         <label>B-TYPE:</label>
+         <select id="btype">
+            <option>commercial</option>
+            <option>non-commercial</option>
+         </select><br><br>
+         <input type="button" value="print">
+         <input type="button" value="calc" onclick="bill()"><br><br>
+         <label id="res">Total amount:</label>
+         
+         
+    </div>
+</form>
+    <script>
+        function bill(){
+            var nu=document.getElementById("nu").value;
+            var city=document.getElementById("city").value;
+            var btype=document.getElementById("btype").value;
+            if(city=="hyd"&&btype=="commercial"){
+                unitcharge=12;
+               
+                gst=6;
+                
+            }
+            else if(city=="hyd"&&btype=="non-commercial")
+            {
+                unitcharge=10;
+                
+                gst=5;
+                
+            }
+            else if(city=="bangloure"&&btype=="commercial")
+            {
+                unitcharge=15;
+                gst=6;
+            }
+            else 
+            {
+                unitcharge=11;
+              
+                gst=8;
+               
+            }
+            var unitcharge=nu*unitcharge;
+            var gst=(unitcharge*gst)/100;
+           var total=gst+unitcharge;
+           
+
+
+            document.getElementById("res").innerHTML+=total;
+
+        }
+    </script>
+    
+</body>
+</html>

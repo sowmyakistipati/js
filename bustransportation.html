@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 200px;
+            background-image:url('https://thumbs.dreamstime.com/z/traffic-london-two-typical-red-buses-adverts-black-mercedes-grey-car-united-kingdom-october-129206797.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+
+            border:2px solid black;
+            width: 300px;
+            height: 300px;
+            margin-left: 500px;
+            background-color: orange;
+        }
+        button{
+            background-color: green;
+        }
+        .btn{
+            background-color: red;
+        }
+       
+    </style>
+    
+</head>
+<body>
+    <div align="center">
+    <h1>Bus Transpotation</h1>
+
+            <label>Name:</label>
+            <input type="text" id="Name">
+            <br><br>
+        
+            <label>Place:</label>
+            <input type="text" id="Place">
+            <br><br>
+        
+            <label>Destination:</label>
+            <select id="Destination">
+                
+                <option value="500">Tirupathi</option>
+                <option value="700">vizag</option>
+                <option value="600">Bangloure</option>
+            </select>
+            <br><br>
+            <label>No of Tickets:</label>
+            <input type="number" id="NoofTickets">
+            <br><br>
+       
+            <button onclick="busticket()">submit</button>
+            <button class="btn">cancle</button><br>
+            <label id="res"></label>
+
+       
+</div>
+<script>
+    function busticket(){
+        var Name=document.getElementById("Name").value;
+        var Place=document.getElementById("Place").value;
+        var Destination=document.getElementById("Destination").value;
+         Destination=parseInt(Destination*5);
+        var NoofTickets=document.getElementById("NoofTickets").value;
+         NoofTickets=parseInt(NoofTickets*Destination);
+        var gst=(NoofTickets*18)/100;
+        total=parseInt(NoofTickets+gst);
+    
+        document.getElementById("res").innerHTML="The total cost of ticket  is : "+total;
+
+       
+    }
+
+</script>
+</body>
+</html>
