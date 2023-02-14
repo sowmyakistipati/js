@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var num=153,rem=0,fact=1,sum=0;
+temp=num;
+while(num!=0)
+{
+i=1;
+fact=1;
+rem=num%10;
+while(i<=rem)
+{
+
+fact=fact*i;
+i++;
+}
+num=parseInt(num/10);
+}
+sum=sum+fact;
+
+if(temp==sum)
+document.write(temp+" is strong");
+else
+document.write(temp+" is not strong");
+
+</script>
+</body>
+</html>

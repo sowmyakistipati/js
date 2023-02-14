@@ -1,0 +1,28 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function mobile(company,model,ram,price)
+{
+this.company=company;
+this.model=model;
+this.ram=ram;
+this.price=price;
+}
+
+
+var details=new mobile("oneplus","9rt","8gb",43000);
+var details_2=new mobile("mi","node 10","4gb",15000);
+var mobiles=[details,details_2];
+for(mob of mobiles)
+{
+for(prop in mob)
+{
+document.write(prop+":"+mob[prop]+"<br>");
+}
+document.write("<br>");
+}
+</script>
+</body>
+</html>

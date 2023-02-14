@@ -1,0 +1,63 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+function library(booktitle,bookauthor,bookyear,bookprice,bookgener)
+{
+this.booktitle=booktitle;
+this.bookauthor=bookauthor;
+this.bookyear=bookyear;
+this.bookprice=bookprice;
+this.bookgeneration=bookgeneration;
+
+}
+var l1= new library("the silent patient","alex michaelides",2019,800,"Thriller");
+var l2= new library("the guest list","alex michaelides",2019,800,"Thriller");
+var l3= new library("girl in room 105","alex michaelides",2019,900,"Thriller");
+var l4= new library("grandparents bag","alex michaelides",2019,800,"story");
+var l5= new library("born a crime","alex michaelides",2019,800,"comedy");
+var l6= new library("the magic of the lost story","alex michaelides",2019,800,"story");
+var l7= new library("a confederacy of dunces","alex michaelides",2019,800,"comedy");
+var librarys=[l1,l2,l3,l4,l5,l6,l7];
+
+var thrillerbooks=librarys.filter ((book)=>{return book.bookgener=="Thriller"})
+var comedybooks=librarys.filter ((book)=>{return book.bookgener=="comedy"})
+var storybooks=librarys.filter ((book)=>{return book.bookgener=="story"})
+
+var wish=parseInt(prompt("Enter book"));
+switch(wish){
+
+case 1:for(ele of thrillerbooks)
+{
+for(thriler in ele)
+{
+document.write(thriller);
+
+}
+}
+break;
+case 2:for(ele of thrillerbooks)
+{
+for(thriler in ele)
+{
+document.write(thriller);
+
+}
+}
+break;
+case 3:for(ele of thrillerbooks)
+{
+for(thriler in ele)
+{
+document.write(thriller);
+
+}
+}
+
+
+
+</script>
+</body>
+</html>

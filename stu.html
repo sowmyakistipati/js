@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function student(stName,stClass,stMarks,stPhone)
+{
+this.stName=stName;
+this.stClass=stClass;
+this.stMarks=stMarks;
+this.stPhone=stPhone;
+}
+var s1=new student("sowmya","btech",89,9346781889);
+var s2=new student("swapna","btech",45,9346781889);
+var s3=new student("ramya","degree",78,9346781889);
+var s4=new student("sita","btech",55,9346781889);
+var s5=new student("ram","btech",87,9346781889);
+var students=[s1,s2,s3,s4,s5];
+var topperstudents=[];
+var newstudents=students.filter((stu)=>{return stu.stMarks>70});
+for(tops of newstudents)
+topperstudents.push(tops.stName);
+document.write(topperstudents.sort());			
+
+</script>
+</body>
+</html>

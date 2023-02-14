@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+var age=parseInt(prompt("enter age"));
+var agecheck=new Promise((resolve,reject)=>{
+if(age>18)
+{
+resolve("greater than 18");
+}
+else
+{
+reject("less than 18");
+}
+}).then((result)=>document.write(result)).catch((result)=>document.write(result)); 
+</script>
+</body>
+</html>
